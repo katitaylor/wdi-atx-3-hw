@@ -1,0 +1,383 @@
+$ pwd
+/Users/kati/Desktop
+kati ~/Desktop
+$ cd kitchen
+kati ~/Desktop/kitchen
+$ rm cans.txt
+removed ‘cans.txt’
+kati ~/Desktop/kitchen
+$ mv /pantry/crisper-drawer /fridge/crisper-drawer
+mv: cannot stat ‘/pantry/crisper-drawer’: No such file or directory
+kati ~/Desktop/kitchen
+$ ls
+fridge/  pantry/
+kati ~/Desktop/kitchen
+$ mv ~/Desktop/kitchen/pantry ~/Desktop/kitchen/fridge
+‘/Users/kati/Desktop/kitchen/pantry’ -> ‘/Users/kati/Desktop/kitchen/fridge/pantry’
+kati ~/Desktop/kitchen
+$ ls
+fridge/
+kati ~/Desktop/kitchen
+$ tree
+.
+└── fridge
+    ├── diapers.txt
+    ├── freezer
+    │   ├── couch.txt
+    │   ├── frozenpeas.txt
+    │   └── icecream.txt
+    ├── milk.txt
+    ├── pantry
+    │   ├── cans.txt
+    │   ├── cereal.txt
+    │   └── crisper-drawer
+    │       └── lettuce.txt
+    └── trashcan
+        ├── banana-peels.txt
+        ├── chicken-bones.txt
+        ├── egg-shells.txt
+        └── sink
+            ├── clean-dishes.txt
+            ├── delete-me.txt
+            └── dirty-dishes.txt
+
+6 directories, 14 files
+kati ~/Desktop/kitchen
+$
+kati ~/Desktop/kitchen
+$ cd fridge
+kati ~/Desktop/kitchen/fridge
+$ rm diapers.txt
+removed ‘diapers.txt’
+kati ~/Desktop/kitchen/fridge
+$ cd freezer/
+kati ~/Desktop/kitchen/fridge/freezer
+$ rm couch.txt
+removed ‘couch.txt’
+kati ~/Desktop/kitchen/fridge/freezer
+$ cd .. kitchen
+kati ~/Desktop/kitchen/fridge
+$ cd ..
+kati ~/Desktop/kitchen
+$ tree
+.
+└── fridge
+    ├── freezer
+    │   ├── frozenpeas.txt
+    │   └── icecream.txt
+    ├── milk.txt
+    ├── pantry
+    │   ├── cans.txt
+    │   ├── cereal.txt
+    │   └── crisper-drawer
+    │       └── lettuce.txt
+    └── trashcan
+        ├── banana-peels.txt
+        ├── chicken-bones.txt
+        ├── egg-shells.txt
+        └── sink
+            ├── clean-dishes.txt
+            ├── delete-me.txt
+            └── dirty-dishes.txt
+
+6 directories, 12 files
+kati ~/Desktop/kitchen
+$ mv ~/Desktop/kitchen/fridge/pantry/crisper-drawer ~/Desktop/kitchen/fridge/crisper-drawer
+‘/Users/kati/Desktop/kitchen/fridge/pantry/crisper-drawer’ -> ‘/Users/kati/Desktop/kitchen/fridge/crisper-drawer’
+kati ~/Desktop/kitchen
+$ tree
+.
+└── fridge
+    ├── crisper-drawer
+    │   └── lettuce.txt
+    ├── freezer
+    │   ├── frozenpeas.txt
+    │   └── icecream.txt
+    ├── milk.txt
+    ├── pantry
+    │   ├── cans.txt
+    │   └── cereal.txt
+    └── trashcan
+        ├── banana-peels.txt
+        ├── chicken-bones.txt
+        ├── egg-shells.txt
+        └── sink
+            ├── clean-dishes.txt
+            ├── delete-me.txt
+            └── dirty-dishes.txt
+
+6 directories, 12 files
+kati ~/Desktop/kitchen
+$ mv ~/Desktop/kitchen/fridge/freezer  ~/Desktop/kitchen/fridge/crisper-drawer/freezer
+‘/Users/kati/Desktop/kitchen/fridge/freezer’ -> ‘/Users/kati/Desktop/kitchen/fridge/crisper-drawer/freezer’
+kati ~/Desktop/kitchen
+$ tree
+.
+└── fridge
+    ├── crisper-drawer
+    │   ├── freezer
+    │   │   ├── frozenpeas.txt
+    │   │   └── icecream.txt
+    │   └── lettuce.txt
+    ├── milk.txt
+    ├── pantry
+    │   ├── cans.txt
+    │   └── cereal.txt
+    └── trashcan
+        ├── banana-peels.txt
+        ├── chicken-bones.txt
+        ├── egg-shells.txt
+        └── sink
+            ├── clean-dishes.txt
+            ├── delete-me.txt
+            └── dirty-dishes.txt
+
+6 directories, 12 files
+kati ~/Desktop/kitchen
+$ mv cd crisper-drawer
+mv: cannot stat ‘cd’: No such file or directory
+kati ~/Desktop/kitchen
+$ cd crisper-drawer
+-bash: cd: crisper-drawer: No such file or directory
+kati ~/Desktop/kitchen
+$ cd ~/Desktop/kitchen/fridge/crisper-drawer/
+kati ~/Desktop/kitchen/fridge/crisper-drawer
+$ touch apples.txt
+kati ~/Desktop/kitchen/fridge/crisper-drawer
+$ cd ~/Desktop/kitchen/
+kati ~/Desktop/kitchen
+$ tree
+.
+└── fridge
+    ├── crisper-drawer
+    │   ├── apples.txt
+    │   ├── freezer
+    │   │   ├── frozenpeas.txt
+    │   │   └── icecream.txt
+    │   └── lettuce.txt
+    ├── milk.txt
+    ├── pantry
+    │   ├── cans.txt
+    │   └── cereal.txt
+    └── trashcan
+        ├── banana-peels.txt
+        ├── chicken-bones.txt
+        ├── egg-shells.txt
+        └── sink
+            ├── clean-dishes.txt
+            ├── delete-me.txt
+            └── dirty-dishes.txt
+
+6 directories, 13 files
+kati ~/Desktop/kitchen
+$ mv ~/Desktop/kitchen/fridge/milk.txt ~/Desktop/kitchen/fridge/crisper-drawer/milk.txt
+‘/Users/kati/Desktop/kitchen/fridge/milk.txt’ -> ‘/Users/kati/Desktop/kitchen/fridge/crisper-drawer/milk.txt’
+kati ~/Desktop/kitchen
+$ tree
+.
+└── fridge
+    ├── crisper-drawer
+    │   ├── apples.txt
+    │   ├── freezer
+    │   │   ├── frozenpeas.txt
+    │   │   └── icecream.txt
+    │   ├── lettuce.txt
+    │   └── milk.txt
+    ├── pantry
+    │   ├── cans.txt
+    │   └── cereal.txt
+    └── trashcan
+        ├── banana-peels.txt
+        ├── chicken-bones.txt
+        ├── egg-shells.txt
+        └── sink
+            ├── clean-dishes.txt
+            ├── delete-me.txt
+            └── dirty-dishes.txt
+
+6 directories, 13 files
+kati ~/Desktop/kitchen
+$ mv ~/Desktop/kitchen/fridge/crisper-drawer/freezer ~/Desktop/kitchen/fridge/freezer
+‘/Users/kati/Desktop/kitchen/fridge/crisper-drawer/freezer’ -> ‘/Users/kati/Desktop/kitchen/fridge/freezer’
+kati ~/Desktop/kitchen
+$ tree
+.
+└── fridge
+    ├── crisper-drawer
+    │   ├── apples.txt
+    │   ├── lettuce.txt
+    │   └── milk.txt
+    ├── freezer
+    │   ├── frozenpeas.txt
+    │   └── icecream.txt
+    ├── pantry
+    │   ├── cans.txt
+    │   └── cereal.txt
+    └── trashcan
+        ├── banana-peels.txt
+        ├── chicken-bones.txt
+        ├── egg-shells.txt
+        └── sink
+            ├── clean-dishes.txt
+            ├── delete-me.txt
+            └── dirty-dishes.txt
+
+6 directories, 13 files
+kati ~/Desktop/kitchen
+$ mv ~/Desktop/kitchen/fridge/crisper-drawer/freezer/pantry/tashcan ~/Desktop/kitchen/pantry/tashcan
+mv: cannot stat ‘/Users/kati/Desktop/kitchen/fridge/crisper-drawer/freezer/pantry/tashcan’: No such file or directory
+kati ~/Desktop/kitchen
+$ mv ~/Desktop/kitchen/fridge/pantry/ ~/Desktop/kitchen/fridge/pantry/
+mv: cannot move ‘/Users/kati/Desktop/kitchen/fridge/pantry/’ to a subdirectory of itself, ‘/Users/kati/Desktop/kitchen/fridge/pantry/pantry’
+kati ~/Desktop/kitchen
+$ tree
+.
+└── fridge
+    ├── crisper-drawer
+    │   ├── apples.txt
+    │   ├── lettuce.txt
+    │   └── milk.txt
+    ├── freezer
+    │   ├── frozenpeas.txt
+    │   └── icecream.txt
+    ├── pantry
+    │   ├── cans.txt
+    │   └── cereal.txt
+    └── trashcan
+        ├── banana-peels.txt
+        ├── chicken-bones.txt
+        ├── egg-shells.txt
+        └── sink
+            ├── clean-dishes.txt
+            ├── delete-me.txt
+            └── dirty-dishes.txt
+
+6 directories, 13 files
+kati ~/Desktop/kitchen
+$ ~/Desktop/kitchen/fridge/pantry/
+-bash: /Users/kati/Desktop/kitchen/fridge/pantry/: is a directory
+kati ~/Desktop/kitchen
+$ mv ~/Desktop/kitchen/fridge/pantry/ ~/Desktop/kitchen/pantry
+‘/Users/kati/Desktop/kitchen/fridge/pantry/’ -> ‘/Users/kati/Desktop/kitchen/pantry’
+kati ~/Desktop/kitchen
+$ tree
+.
+├── fridge
+│   ├── crisper-drawer
+│   │   ├── apples.txt
+│   │   ├── lettuce.txt
+│   │   └── milk.txt
+│   ├── freezer
+│   │   ├── frozenpeas.txt
+│   │   └── icecream.txt
+│   └── trashcan
+│       ├── banana-peels.txt
+│       ├── chicken-bones.txt
+│       ├── egg-shells.txt
+│       └── sink
+│           ├── clean-dishes.txt
+│           ├── delete-me.txt
+│           └── dirty-dishes.txt
+└── pantry
+    ├── cans.txt
+    └── cereal.txt
+
+6 directories, 13 files
+kati ~/Desktop/kitchen
+$ ~/Desktop/kitchen/fridge/trashcan ~/Desktop/kitchen/trashcan
+-bash: /Users/kati/Desktop/kitchen/fridge/trashcan: is a directory
+kati ~/Desktop/kitchen
+$ mv ~/Desktop/kitchen/fridge/trashcan ~/Desktop/kitchen/trashcan
+‘/Users/kati/Desktop/kitchen/fridge/trashcan’ -> ‘/Users/kati/Desktop/kitchen/trashcan’
+kati ~/Desktop/kitchen
+$ mv ~/Desktop/kitchen/trashcan/sink ~/Desktop/kitchen/sink
+‘/Users/kati/Desktop/kitchen/trashcan/sink’ -> ‘/Users/kati/Desktop/kitchen/sink’
+kati ~/Desktop/kitchen
+$ tree
+.
+├── fridge
+│   ├── crisper-drawer
+│   │   ├── apples.txt
+│   │   ├── lettuce.txt
+│   │   └── milk.txt
+│   └── freezer
+│       ├── frozenpeas.txt
+│       └── icecream.txt
+├── pantry
+│   ├── cans.txt
+│   └── cereal.txt
+├── sink
+│   ├── clean-dishes.txt
+│   ├── delete-me.txt
+│   └── dirty-dishes.txt
+└── trashcan
+    ├── banana-peels.txt
+    ├── chicken-bones.txt
+    └── egg-shells.txt
+
+6 directories, 13 files
+kati ~/Desktop/kitchen
+$ mv ~/Desktop/kitchen/fridge/crisper-drawer/milk.txt ~/Desktop/kitchen/fridge/milk.txt
+‘/Users/kati/Desktop/kitchen/fridge/crisper-drawer/milk.txt’ -> ‘/Users/kati/Desktop/kitchen/fridge/milk.txt’
+kati ~/Desktop/kitchen
+$ tree
+.
+├── fridge
+│   ├── crisper-drawer
+│   │   ├── apples.txt
+│   │   └── lettuce.txt
+│   ├── freezer
+│   │   ├── frozenpeas.txt
+│   │   └── icecream.txt
+│   └── milk.txt
+├── pantry
+│   ├── cans.txt
+│   └── cereal.txt
+├── sink
+│   ├── clean-dishes.txt
+│   ├── delete-me.txt
+│   └── dirty-dishes.txt
+└── trashcan
+    ├── banana-peels.txt
+    ├── chicken-bones.txt
+    └── egg-shells.txt
+
+6 directories, 13 files
+kati ~/Desktop/kitchen
+$ cd sink/
+kati ~/Desktop/kitchen/sink
+$ rm delete-me.txt
+removed ‘delete-me.txt’
+kati ~/Desktop/kitchen/sink
+$ mkdir drying-rack
+mkdir: created directory ‘drying-rack’
+kati ~/Desktop/kitchen/sink
+$ mv ~/Desktop/kitchen/sink/clean-dishes.txt ~/Desktop/kitchen/sink/drying-rack/‘/Users/kati/Desktop/kitchen/sink/clean-dishes.txt’ -> ‘/Users/kati/Desktop/kitchen/sink/drying-rack/clean-dishes.txt’
+kati ~/Desktop/kitchen/sink
+$ cd ..
+kati ~/Desktop/kitchen
+$ tree
+.
+├── fridge
+│   ├── crisper-drawer
+│   │   ├── apples.txt
+│   │   └── lettuce.txt
+│   ├── freezer
+│   │   ├── frozenpeas.txt
+│   │   └── icecream.txt
+│   └── milk.txt
+├── pantry
+│   ├── cans.txt
+│   └── cereal.txt
+├── sink
+│   ├── dirty-dishes.txt
+│   └── drying-rack
+│       └── clean-dishes.txt
+└── trashcan
+    ├── banana-peels.txt
+    ├── chicken-bones.txt
+    └── egg-shells.txt
+
+7 directories, 12 files
+kati ~/Desktop/kitchen
+$
