@@ -1,12 +1,30 @@
-/* 
+.box {
+  min-width: 910px
+  margin: 0px auto;
+  width: 75%;
+}
 
-## Style Hints: 
+p {
+  font-size: 12px;
+  font-family: "Times New Roman", serif;
+  color: #656565;
+  margin: 0 5% 0 5%;
+}
 
-Body Font Size = 12px
-	 Line Height = 17px
-	 Font Family = "Times New Roman", serif
-	 Font Color = #656565
+li {
+  display: inline-block;
 
-Link Hover Color = #20222a
+}
+  a:hover {
+    color: #20222a;
+}
 
-*/
+
+
+img {
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+
