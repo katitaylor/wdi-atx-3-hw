@@ -1,0 +1,27 @@
+$margin: 0 5% 0 5%;
+$font: 12px, "Times New Roman", sans-serif;
+
+.box {
+  min-width: 910px;
+  margin: 0px auto;
+  width: 75%;
+}
+
+p {
+  font: $font;
+  color: #656565;
+  margin: $margin;
+}
+
+li {
+  display: inline-block;
+}
+  a:hover {
+    color: #20222a;
+}
+
+img {
+  justify-content: center;
+  margin: $margin;
+}
+
