@@ -1,0 +1,21 @@
+title: tice tac toe game
+time to mvp: 20 hours
+
+goal:
+
+Build a tic-tac-toe game board with two sets of game pieces in different designs, two player interaction.
+
+mvp requirements:
+
+User will open game to see a board divided into nine sections.
+User will have "player one" and "player two" pieces available.
+User will be able to move pieces to any block on the game board.
+User will see a pop-up alert "You have won this game!" when three matching pieces have been placed in a row on the game board.
+
+actions:
+create wireframe on gliffy
+design game board with 9 divided sections
+design game pieces
+
+
+
