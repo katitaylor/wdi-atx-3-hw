@@ -17,5 +17,12 @@ create wireframe on gliffy
 design game board with 9 divided sections
 design game pieces
 
+- board with 9 quadrants
+- buttons:
+    play game
+    player 1 : on & off position
+    player two : on & off position
+    quadrant button selections : unselected, p1, p2
 
+general logic:
 
