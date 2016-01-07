@@ -1,5 +1,10 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'tilt/erb'
+
+get '/' do
+  erb :index
+end
 
 # Coin toss
 get '/coin_toss' do
