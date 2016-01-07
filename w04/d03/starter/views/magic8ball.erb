@@ -7,7 +7,9 @@
 
 <h3>Welcome to the 8 ball</h3>
 
-<%= @magic8ball %>
+<% @magic8ball load '/public/magic8ball.rb' %>
+
+<%=  prompt "Ask the Magic 8-Ball a question! (q to quit)" %>
 
 </body>
 </html>
