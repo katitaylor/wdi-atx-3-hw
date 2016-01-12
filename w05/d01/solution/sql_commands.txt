@@ -1,0 +1,102 @@
+1. All columns for all players from the New York Knicks (NYK)
+
+nba_db=# SELECT * FROM players WHERE team = 'NYK';
+ id  |       name       | age | team | games | points
+-----+------------------+-----+------+-------+--------
+  17 | Carmelo Anthony  |  27 | NYK  |    55 |   1245
+...
+ 407 | Amare Stoudemire |  29 | NYK  |    47 |    823
+ 442 | Bill Walker      |  24 | NYK  |    32 |    189
+(17 rows)
+
+2. All columns for all players from the Indiana Pacers (IND) who are under 26 years old
+
+nba_db=# SELECT * FROM players WHERE team = 'IND' and age <26;
+ id  |       name       | age | team | games | points
+-----+------------------+-----+------+-------+--------
+  91 | Darren Collison  |  24 | IND  |    60 |    621
+ ...
+ 143 | Kyrylo Fesenko   |  25 | IND  |     3 |      8
+ 164 | Paul George      |  21 | IND  |    66 |    798
+
+(8 rows)
+
+3. All columns for all players, ordered from least points scored to most points scored
+
+nba_db=# SELECT * FROM players ORDER BY points;
+ id  |        name         | age | team | games | points
+-----+---------------------+-----+------+-------+--------
+ 324 | Hamady NDiaye       |  25 | WAS  |     3 |      0
+...
+ 155 | Dan Gadzuric        |  33 | NYK  |     2 |      0
+ 390 | Brian Skinner       |  35 | MEM  |     1 |      0
+(478 rows)
+
+4. Name and Points per game (points/games), for the players with the top 20 points per game
+
+nba_db=# SELECT name, points FROM players ORDER BY games DESC limit 20;
+       name       | points
+       name       | points
+------------------+--------
+ Gordon Hayward   |    782
+...
+ DeAndre Jordan   |    486
+ Danny Green      |    603
+(20 rows)
+
+5. The average age for all players
+
+nba_db=# SELECT AVG(age) AS "Average Age" FROM players;
+     Average Age
+---------------------
+ 26.6443514644351464
+(1 row)
+
+6. The average age for all players on the Oklahoma City Thunder (OKC)
+
+nba_db=# SELECT AVG(age) AS "Average Age" FROM players WHERE team = 'OKC';
+     Average Age
+---------------------
+ 25.4000000000000000
+(1 row)
+
+7. The average age for all players who played more than 40 games
+
+nba_db=# SELECT AVG(age) AS "Average Age" FROM players WHERE games > 40;
+     Average Age
+---------------------
+ 26.4561403508771930
+(1 row)
+
+8. The team and total points scored from all players on that team (team points), ordered from most team points to least
+
+nba_db=# SELECT points, team FROM players GROUP BY points, team ORDER BY SUM(points) DESC;
+ points | team
+--------+------
+   1850 | OKC
+   1683 | MIA
+   1616 | LAL
+
+nba_db=# SELECT SUM(games)+SUM(points) AS "total points", team FROM players GROUP BY games, points, team ORDER BY points DESC;
+ total points | team
+--------------+------
+         1916 | OKC
+         1745 | MIA
+         1674 | LAL
+         1624 | OKC
+
+###Bonus
+1. Age and the average points per game for that age, ordered from youngest to oldest
+
+nba_db=# SELECT age, AVG(points) FROM players GROUP BY age ORDER BY age ASC;
+ age |         avg
+-----+----------------------
+  19 | 445.7500000000000000
+  20 | 399.1000000000000000
+  ...
+  38 | 170.5000000000000000
+  39 | 329.5000000000000000
+(21 rows)
+
+2. Team and the the number of players who score above 12 points per game on that team, ordered from most to least
+
