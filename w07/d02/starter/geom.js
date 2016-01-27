@@ -16,10 +16,13 @@ Rectangle.prototype.area = function() {
 }
 
 Rectangle.prototype.perimeter = function() {
-  return ((this.length(2)) + (this.width(2))
-}
+  if (this.length*2 + this.width*2);
+};
 
-
+var rect = new Rectangle(3, 6);
+console.log(rect.isSquare());
+console.log(rect.area());
+console.log(rect.perimeter());
 
 function Triangle(sideA, sideB, sideC) {
   this.sideA = sideA;
@@ -27,14 +30,13 @@ function Triangle(sideA, sideB, sideC) {
   this.sideC = sideC;
 }
 
-var triangle = new triangle();
-Triangle.prototype = triangle;
-
 Triangle.prototype.getPerimeter = function() {
-	return this.sideA + this.sideB + this.sideC
+	return (this.sideA + this.sideB + this.sideC)
   // Your code goes here
 };
 
+var tri = new Triangle(2, 3, 5);
+console.log(tri.getPerimeter());
 
 function LineSegment(x1, y1, x2, y2) {
   this.x1 = x1;
