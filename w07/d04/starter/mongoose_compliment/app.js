@@ -25,7 +25,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://'+process.env.WDI_MONGOLAB_USER+':'+process.env.WDI_MONGOLAB_PW+'@ds043002.mongolab.com:43002/emergency-compliment');
 
 
-app.use('/', routes);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
