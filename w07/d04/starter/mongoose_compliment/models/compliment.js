@@ -3,7 +3,10 @@ var mongoose = require('mongoose');
 
 // var Schema = mongoose.Schema;
 
+
 var complimentSchema = new mongoose.Schema({
+
+var complimentSchema = new Schema({
   compliment: { type: String, required: true }
 });
 
